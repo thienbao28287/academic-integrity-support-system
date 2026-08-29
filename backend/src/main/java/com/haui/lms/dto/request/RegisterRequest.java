@@ -1,4 +1,4 @@
-package com.haui.lms.dto;
+package com.haui.lms.dto.request;
 
 import jakarta.validation.constraints.*;
 import lombok.Getter;
@@ -20,6 +20,7 @@ public class RegisterRequest {
 
     @NotBlank(message = ErrorMessage.NOT_BLANK_FIELD)
     @Size(min = CommonConstant.PASSWORD_MIN_LENGTH, max = CommonConstant.PASSWORD_LENGTH, message = ErrorMessage.INVALID_FORMAT_PASSWORD)
+    @Pattern(regexp = CommonConstant.PASSWORD_REGEX, message = ErrorMessage.INVALID_FORMAT_PASSWORD)
     private String password;
 
     @NotBlank(message = ErrorMessage.NOT_BLANK_FIELD)
