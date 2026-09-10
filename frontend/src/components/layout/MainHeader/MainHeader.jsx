@@ -67,10 +67,10 @@ function MainHeader({ profile }) {
             <HomeIcon />
             <span>Trang chủ</span>
           </NavLink>
-          <button className="main-nav-item" type="button" disabled title="Tính năng đang phát triển">
+          <NavLink to={ROUTES.JOURNALS} className={({ isActive }) => `main-nav-item${isActive ? " active" : ""}`}>
             <SearchIcon />
             <span>Tra cứu</span>
-          </button>
+          </NavLink>
           <button className="main-nav-item" type="button" disabled title="Tính năng đang phát triển">
             <CourseIcon />
             <span>Khóa học</span>

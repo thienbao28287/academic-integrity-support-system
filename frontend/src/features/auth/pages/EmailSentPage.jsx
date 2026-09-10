@@ -1,5 +1,5 @@
-import AuthLayout from "../features/auth/components/AuthLayout";
-import EmailSent from "../features/auth/components/EmailSent/";
+import AuthLayout from "../components/AuthLayout";
+import EmailSent from "../components/EmailSent/";
 
 function EmailSentPage() {
   return (

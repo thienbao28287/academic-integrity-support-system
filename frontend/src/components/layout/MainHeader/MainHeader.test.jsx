@@ -81,11 +81,15 @@ describe("MainHeader", () => {
     expect(container.querySelector('[data-testid="location"]').textContent).toBe("/login");
   });
 
-  it("keeps unavailable navigation items disabled", () => {
+  it("navigates to journals and keeps only the course item disabled", () => {
     renderHeader();
+    const journalLink = [...container.querySelectorAll("a")].find((item) => item.textContent.includes("Tra cứu"));
+    act(() => journalLink.click());
+
+    expect(container.querySelector('[data-testid="location"]').textContent).toBe("/journals");
     const disabledItems = container.querySelectorAll(".main-nav-item:disabled");
 
-    expect(disabledItems).toHaveLength(2);
-    expect([...disabledItems].map((item) => item.textContent)).toEqual(["Tra cứu", "Khóa học"]);
+    expect(disabledItems).toHaveLength(1);
+    expect([...disabledItems].map((item) => item.textContent)).toEqual(["Khóa học"]);
   });
 });
