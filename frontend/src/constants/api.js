@@ -22,4 +22,12 @@ export const API = {
     AVATAR: "/api/v1/user/avatar",
     CHANGE_PASSWORD: "/api/v1/user/change-password",
   },
+
+  JOURNALS: {
+    SEARCH: "/api/v1/journals/search",
+    DETAIL: (issn) => `/api/v1/journals/${encodeURIComponent(issn)}`,
+    TRENDS: (issn) => `/api/v1/journals/${encodeURIComponent(issn)}/trends`,
+    TREND_JOB: (jobId) => `/api/v1/journals/trend-jobs/${encodeURIComponent(jobId)}`,
+    TREND_RESULT: (jobId) => `/api/v1/journals/trend-jobs/${encodeURIComponent(jobId)}/result`,
+  },
 };

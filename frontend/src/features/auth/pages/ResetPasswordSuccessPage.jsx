@@ -1,5 +1,5 @@
-import AuthLayout from "../features/auth/components/AuthLayout";
-import ResetPasswordSuccess from "../features/auth/components/ResetPasswordSuccess";
+import AuthLayout from "../components/AuthLayout";
+import ResetPasswordSuccess from "../components/ResetPasswordSuccess";
 
 function ResetPasswordSuccessPage() {
   return (

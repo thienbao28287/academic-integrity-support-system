@@ -6,17 +6,18 @@ import { ROUTES } from "../constants/routes";
 import ProtectedRoute from "./ProtectedRoute";
 import AppLayout from "../components/layout/AppLayout/AppLayout";
 
-const LoginPage = lazy(() => import("../pages/LoginPage"));
-const RegisterPage = lazy(() => import("../pages/RegisterPage"));
-const ForgotPasswordPage = lazy(() => import("../pages/ForgotPasswordPage"));
-const EmailSentPage = lazy(() => import("../pages/EmailSentPage"));
-const OTPPage = lazy(() => import("../pages/OTPPage"));
-const ResetPasswordPage = lazy(() => import("../pages/ResetPasswordPage"));
-const ResetPasswordSuccessPage = lazy(() => import("../pages/ResetPasswordSuccessPage"));
-const OAuthCallbackPage = lazy(() => import("../pages/OAuthCallbackPage"));
+const LoginPage = lazy(() => import("../features/auth/pages/LoginPage"));
+const RegisterPage = lazy(() => import("../features/auth/pages/RegisterPage"));
+const ForgotPasswordPage = lazy(() => import("../features/auth/pages/ForgotPasswordPage"));
+const EmailSentPage = lazy(() => import("../features/auth/pages/EmailSentPage"));
+const OTPPage = lazy(() => import("../features/auth/pages/OTPPage"));
+const ResetPasswordPage = lazy(() => import("../features/auth/pages/ResetPasswordPage"));
+const ResetPasswordSuccessPage = lazy(() => import("../features/auth/pages/ResetPasswordSuccessPage"));
+const OAuthCallbackPage = lazy(() => import("../features/auth/pages/OAuthCallbackPage"));
 const HomePage = lazy(() => import("../pages/HomePage"));
-const ProfilePage = lazy(() => import("../pages/ProfilePage"));
-const ChangePasswordPage = lazy(() => import("../pages/ChangePasswordPage"));
+const JournalsPage = lazy(() => import("../pages/JournalsPage"));
+const ProfilePage = lazy(() => import("../features/user/pages/ProfilePage"));
+const ChangePasswordPage = lazy(() => import("../features/user/pages/ChangePasswordPage"));
 const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
 
 function RouteLoading() {
@@ -41,6 +42,7 @@ function AppRoutes() {
         }
       >
         <Route path={ROUTES.HOME} element={<HomePage />} />
+        <Route path={ROUTES.JOURNALS} element={<JournalsPage />} />
         <Route path={ROUTES.PROFILE} element={<ProfilePage />} />
         <Route path={ROUTES.CHANGE_PASSWORD} element={<ChangePasswordPage />} />
       </Route>

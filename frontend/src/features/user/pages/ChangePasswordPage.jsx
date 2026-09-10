@@ -1,4 +1,4 @@
-import ChangePasswordForm from "../features/user/components/ChangePasswordForm/ChangePasswordForm";
+import ChangePasswordForm from "../components/ChangePasswordForm/ChangePasswordForm";
 
 function ChangePasswordPage() {
   return <ChangePasswordForm />;
