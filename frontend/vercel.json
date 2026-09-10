@@ -33,7 +33,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://lms-haui.fit/api/:path*"
+      "destination": "http://54.255.240.146:8080/api/:path*"
     },
     {
       "source": "/(.*)",
